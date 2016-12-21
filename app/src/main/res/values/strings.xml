@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AnimationSummary</string>
+    <string name="action_bezier">Bezier</string>
+</resources>

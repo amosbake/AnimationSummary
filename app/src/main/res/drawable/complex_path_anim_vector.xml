@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/complex_path">
+    <target
+        android:animation="@animator/anim_trim_1_0"
+        android:name="star"/>
+    <target
+        android:animation="@animator/anim_stroke_color"
+        android:name="star"/>
+</animated-vector>
