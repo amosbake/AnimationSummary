@@ -7,4 +7,9 @@
         android:orderInCategory="100"
         android:title="@string/action_bezier"
         app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_morph"
+        android:orderInCategory="100"
+        android:title="@string/action_morph"
+        app:showAsAction="ifRoom"/>
 </menu>

@@ -1,14 +1,13 @@
 package io.amosbake.animationsummary;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-public class BezierActivity extends AppCompatActivity {
-
+public class PathMorphActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bezier);
+        setContentView(R.layout.activity_path_morph);
     }
 }

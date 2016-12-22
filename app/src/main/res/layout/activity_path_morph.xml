@@ -15,18 +15,16 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="vertical">
-        <io.amosbake.animationsummary.wiget.SecondBezierView
-            android:id="@+id/secondBezier"
+        <io.amosbake.animationsummary.wiget.PathMorphView
+            android:id="@+id/morphBezier"
             android:layout_width="300dp"
-            android:layout_height="200dp"/>
-        <io.amosbake.animationsummary.wiget.ThirdBezierView
-            android:id="@+id/thirdBezier"
+            android:layout_height="300dp"/>
+        <io.amosbake.animationsummary.wiget.WaveBezierView
+            android:id="@+id/waveBezier"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
             android:layout_width="300dp"
-            android:layout_height="200dp"/>
-        <io.amosbake.animationsummary.wiget.DrawPadView
-            android:id="@+id/drawPad"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"/>
+            android:layout_height="300dp"/>
     </LinearLayout>
 
 </ScrollView>

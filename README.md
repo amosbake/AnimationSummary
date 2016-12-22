@@ -95,3 +95,36 @@ animated-vector 定义矢量图中的那些部分和属性运行怎样的动画
 3. vector加载速度快于png 渲染速度慢于png.对于图像过于复杂的情况,应使用png
 
 ## 贝塞尔曲线
+贝塞尔曲线是计算机图形学中相当重要的参数曲线,它的特点是仅用少量的控制点就可以绘制出复杂的连续平滑曲线.
+在Android中经常用到的是二阶贝塞尔曲线和三阶贝塞尔曲线.
+
+二次方贝塞尔曲线的路径由给定点P0、P1、P2的函数B（t）追踪
+![二次方贝塞尔曲线](http://upload.wikimedia.org/math/0/5/c/05c4210c69ffb1358ceb8eb83a1a06fe.png?_=3035541)
+
+其中p1为控制点
+
+![绘制图形](http://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Bezier_2_big.gif/240px-Bezier_2_big.gif?_=3035541)
+
+对应的Android绘制代码为:
+```java
+    mPath.reset();
+    mPath.moveTo(startPointX, startPointY);
+    mPath.quadTo(flagPointX, flagPointY, endPointX, endPointY);
+    canvas.drawPath(mPath, mPathPaint);
+```
+
+三次方贝塞尔曲线较二阶的多一个控制点,曲线在感官上更平滑.
+
+![二次方贝塞尔曲线](http://upload.wikimedia.org/math/5/9/7/597ecc5022fa7ab65509d5edfa9c148c.png?_=3035541)
+
+其中p1,p2为控制点
+
+![绘制动画](http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Bezier_3_big.gif/240px-Bezier_3_big.gif?_=3035541)
+
+对应的Android绘制代码为:
+```java
+    mPath.reset();
+    mPath.moveTo(startPointX, startPointY);
+    mPath.cubicTo(flag1PointX, flag1PointY, flag2PointX, flag2PointY, endPointX, endPointY);
+    canvas.drawPath(mPath, mPathPaint);
+```

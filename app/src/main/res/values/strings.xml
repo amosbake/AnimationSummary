@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">AnimationSummary</string>
+    <string name="app_name">高阶动画</string>
     <string name="action_bezier">Bezier</string>
+    <string name="action_morph">Morph</string>
 </resources>

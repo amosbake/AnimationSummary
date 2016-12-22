@@ -119,6 +119,11 @@ public class MainActivity extends AppCompatActivity {
             this.startActivity(_intent);
             this.finish();
             return true;
+        }else if (id == R.id.action_morph){
+            Intent _intent = new Intent(this,PathMorphActivity.class);
+            this.startActivity(_intent);
+            this.finish();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
