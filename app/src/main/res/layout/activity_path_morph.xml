@@ -25,6 +25,12 @@
             android:background="@color/colorPrimary"
             android:layout_width="300dp"
             android:layout_height="300dp"/>
+        <io.amosbake.animationsummary.wiget.PathBezierView
+            android:id="@+id/pathBezier"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:layout_width="300dp"
+            android:layout_height="300dp"/>
     </LinearLayout>
 
 </ScrollView>

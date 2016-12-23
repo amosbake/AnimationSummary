@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         setupColorAnim();
         setupSearchAnim();
         setupPathTrimAnim();
+        setupXmlMorphAnim();
+
+    }
+
+    private void setupXmlMorphAnim() {
         ivAnimFiveStar = (ImageView) findViewById(R.id.ivAnimFiveStar);
         findViewById(R.id.btnFiveStarAnim).setOnClickListener(new View.OnClickListener() {
             @Override

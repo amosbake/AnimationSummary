@@ -128,3 +128,121 @@ animated-vector 定义矢量图中的那些部分和属性运行怎样的动画
     mPath.cubicTo(flag1PointX, flag1PointY, flag2PointX, flag2PointY, endPointX, endPointY);
     canvas.drawPath(mPath, mPathPaint);
 ```
+
+### 贝塞尔曲线插值器
+在实际应用中,可能遇到追踪贝塞尔曲线的坐标变化轨迹.根据贝塞尔曲线的方程可以很方便的做到这一点.
+同时也可以依据其特性,应用在属性动画插值器上
+```java
+public class BezierUtil {
+
+    /**
+     * B(t) = (1 - t)^2 * P0 + 2t * (1 - t) * P1 + t^2 * P2, t ∈ [0,1]
+     *
+     * @param t  曲线长度比例
+     * @param p0 起始点
+     * @param p1 控制点
+     * @param p2 终止点
+     * @return t对应的点
+     */
+    public static PointF CalculateBezierPointForQuadratic(float t, PointF p0, PointF p1, PointF p2) {
+        PointF point = new PointF();
+        float temp = 1 - t;
+        point.x = temp * temp * p0.x + 2 * t * temp * p1.x + t * t * p2.x;
+        point.y = temp * temp * p0.y + 2 * t * temp * p1.y + t * t * p2.y;
+        return point;
+    }
+
+    /**
+     * B(t) = P0 * (1-t)^3 + 3 * P1 * t * (1-t)^2 + 3 * P2 * t^2 * (1-t) + P3 * t^3, t ∈ [0,1]
+     *
+     * @param t  曲线长度比例
+     * @param p0 起始点
+     * @param p1 控制点1
+     * @param p2 控制点2
+     * @param p3 终止点
+     * @return t对应的点
+     */
+    public static PointF CalculateBezierPointForCubic(float t, PointF p0, PointF p1, PointF p2, PointF p3) {
+        PointF point = new PointF();
+        float temp = 1 - t;
+        point.x = p0.x * temp * temp * temp + 3 * p1.x * t * temp * temp + 3 * p2.x * t * t * temp + p3.x * t * t * t;
+        point.y = p0.y * temp * temp * temp + 3 * p1.y * t * temp * temp + 3 * p2.y * t * t * temp + p3.y * t * t * t;
+        return point;
+    }
+}
+
+
+public class BezierEvaluator implements TypeEvaluator<PointF> {
+    private PointF flagPoint;
+
+    public BezierEvaluator(PointF flagPoint) {
+        this.flagPoint = flagPoint;
+    }
+
+    @Override
+    public PointF evaluate(float fraction, PointF startValue, PointF endValue) {
+        return BezierUtil.CalculateBezierPointForQuadratic(fraction,startValue,flagPoint,endValue);
+    }
+}
+
+```
+
+### 贝塞尔曲线模拟水波纹
+由于贝塞尔曲线的特性,可以很好地拟合三角函数.
+一般的,对于一个标准正弦函数(~AD),可以选择BC点作为控制点,其中`H = π-2`
+
+![sin](http://p1.bpimg.com/503341/a90096d1668389be.png)
+
+那么对于一个波长为L的正弦波来说,控制点偏移量`H = L*(π-2)/2π`,那么通过不断改变起始点的位置,在视觉效果上就能得到水波纹不断行进的效果了.
+```java
+    public static final double PARMS = (PI - 2) / (2 * PI);
+   @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        startPointX = 0 - waveLength + mOffset;
+        startPointY = getHeight() / 2 + waveHeight;
+        mPath.reset();
+        mPath.moveTo(startPointX, startPointY);
+        for (int i = 0; startPointX + waveLength * i < getWidth(); i++) {
+            float flagpoint1X = (float) (startPointX + PARMS *waveLength + waveLength*i);
+            float flagpoint1Y = startPointY ;
+            float endpointX = startPointX + waveLength/2 + waveLength*i;
+            float endpointY = startPointY  - waveHeight;
+            float flagpoint2X = (float) (endpointX - PARMS *waveLength);
+            float flagpoint2Y = endpointY ;
+
+            mPath.cubicTo(flagpoint1X,flagpoint1Y,flagpoint2X,flagpoint2Y,endpointX,endpointY);
+
+            float flagpoint3X = (float) (endpointX + PARMS *waveLength );
+            float flagpoint3Y = endpointY ;
+            float endpoint2X = startPointX + waveLength + waveLength*i;
+            float endpoint2Y = startPointY ;
+            float flagpoint4X = (float) (endpoint2X - PARMS *waveLength);
+            float flagpoint4Y = endpoint2Y ;
+
+            mPath.cubicTo(flagpoint3X,flagpoint3Y,flagpoint4X,flagpoint4Y,endpoint2X,endpoint2Y);
+        }
+        mPath.lineTo(getWidth(),getHeight());
+        mPath.lineTo(0,getHeight());
+        mPath.close();
+        canvas.drawPath(mPath, mPathPaint);
+
+    }
+
+     @Override
+    public void onClick(View v) {
+        mAnimator = ValueAnimator.ofFloat(0,waveLength);
+        mAnimator.setDuration(1000);
+        mAnimator.setRepeatCount(ValueAnimator.INFINITE);
+        mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mOffset = (float) animation.getAnimatedValue();
+                postInvalidate();
+            }
+        });
+        mAnimator.setInterpolator(new LinearInterpolator());
+        mAnimator.start();
+    }
+```
+
