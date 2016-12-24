@@ -246,3 +246,18 @@ public class BezierEvaluator implements TypeEvaluator<PointF> {
     }
 ```
 
+## PathMeasure
+PathMeasure 可以用来测量并提供Path的相关信息,对于我们实现轨迹动画提供了很好的帮助.
+```java
+//新建PathMeasure对象
+    PathMeasure pathMeasure = new PathMeasure();
+    //设置待测量的Path对象,true为测量path的闭合长度,不会对path产生影响
+    pathMeasure.setPath(path, true);
+    //获取测量长度
+    length = pathMeasure.getLength();
+    //截取从start至end长度的Path路径至dstPath
+    pathMeasure.getSegment(start,end,dstPath,true)
+    //获取在distance长度处的点的坐标和切线的正切值
+    pathMeasure.getPosTan(<dist></dist>ance,pos,tan);
+```
+PathTracingView,PathPaintView 为PathMeasure的应用示例.

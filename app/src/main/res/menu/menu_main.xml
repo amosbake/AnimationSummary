@@ -12,4 +12,9 @@
         android:orderInCategory="100"
         android:title="@string/action_morph"
         app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_meature"
+        android:orderInCategory="100"
+        android:title="@string/action_measure"
+        app:showAsAction="ifRoom"/>
 </menu>

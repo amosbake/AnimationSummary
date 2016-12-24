@@ -129,6 +129,11 @@ public class MainActivity extends AppCompatActivity {
             this.startActivity(_intent);
             this.finish();
             return true;
+        } else if (id == R.id.action_meature) {
+            Intent _intent = new Intent(this, PathMeatureActivity.class);
+            this.startActivity(_intent);
+            this.finish();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
