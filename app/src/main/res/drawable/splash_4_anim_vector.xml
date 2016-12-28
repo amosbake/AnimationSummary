@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_splash_4">
+    <target
+        android:animation="@animator/anim_fade_in"
+        android:name="scene_4_a_1"/>
+    <target
+        android:animation="@animator/anim_fade_in"
+        android:name="scene_4_a_2"/>
+    <target
+        android:animation="@animator/anim_fade_in"
+        android:name="scene_4_a_3"/>
+    <target
+        android:animation="@animator/anim_fade_in"
+        android:name="scene_4_a_4"/>
+
+    <target
+        android:animation="@animator/anim_trim_1_0"
+        android:name="scene_4_t_5"/>
+    <target
+        android:animation="@animator/anim_trim_1_0"
+        android:name="scene_4_t_6"/>
+
+</animated-vector>

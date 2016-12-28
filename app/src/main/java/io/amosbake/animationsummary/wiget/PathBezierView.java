@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 
-import io.amosbake.animationsummary.utils.BezierEvaluator;
+import io.amosbake.animationsummary.utils.QuadBezierEvaluator;
 
 /**
  * Author: mopel
@@ -86,7 +86,7 @@ public class PathBezierView extends View implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        BezierEvaluator  _evaluator = new BezierEvaluator(new PointF(flagPointX,flagPointY));
+        QuadBezierEvaluator _evaluator = new QuadBezierEvaluator(new PointF(flagPointX,flagPointY));
         ValueAnimator _valueAnimator = ValueAnimator.ofObject(_evaluator,new PointF(startPointX,startPointY),new PointF(endPointX,endPointY));
         _valueAnimator.setInterpolator(new AccelerateInterpolator());
         _valueAnimator.setDuration(3000);

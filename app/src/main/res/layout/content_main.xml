@@ -145,6 +145,43 @@
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:id="@+id/btnSplashAnim"
+            style="@style/demo_style"
+            android:layout_height="200dp">
+            <ImageView
+                android:id="@+id/ivAnimSplash4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:src="@drawable/splash_4_anim_vector"/>
+            <ImageView
+                android:id="@+id/ivAnimSplash3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:src="@drawable/splash_3_anim_vector"/>
+            <ImageView
+                android:id="@+id/ivAnimSplash2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:src="@drawable/splash_2_anim_vector"/>
+            <ImageView
+                android:id="@+id/ivAnimSplash"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:src="@drawable/splash_1_anim_vector"/>
+
+
+
+        </RelativeLayout>
+
 
 
     </LinearLayout>

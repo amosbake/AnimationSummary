@@ -1,0 +1,100 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="24dp"
+        android:height="24dp"
+        android:viewportHeight="1280.0"
+        android:viewportWidth="720.0">
+
+
+
+    <path
+        android:name="scene_2_floor_right"
+        android:fillColor="#00000000"
+        android:pathData="M579,929L358,929"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <path
+        android:name="scene_2_floor_left"
+        android:fillColor="#00000000"
+        android:pathData="M137,929L358,929"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <!--A begin -->
+    <path
+        android:name="scene_2_a_1"
+        android:fillColor="#00000000"
+        android:pathData="M162.3,729.8 V859.5"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <path
+        android:name="scene_2_a_2"
+        android:fillColor="#00000000"
+        android:pathData="M162.3,729.8 H360.65"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <path
+        android:name="scene_2_a_3"
+        android:fillColor="#00000000"
+        android:pathData="M162.3,729.8 h-24"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <!--A end -->
+    <!--B begin -->
+    <path
+        android:name="scene_2_b_1"
+        android:fillColor="#00000000"
+        android:pathData="M559,729.8 V859.5"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <path
+        android:name="scene_2_b_2"
+        android:fillColor="#00000000"
+        android:pathData="M559,729.8 H360.65"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <path
+        android:name="scene_2_b_3"
+        android:fillColor="#00000000"
+        android:pathData="M559,729.8 h24"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <!--C begin -->
+    <path
+        android:name="scene_2_c_1"
+        android:fillColor="#00000000"
+        android:pathData="M326.8,859.5H162.3"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <path
+        android:name="scene_2_c_2"
+        android:fillColor="#00000000"
+        android:pathData="M326.8,859.5V798h35"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <path
+        android:name="scene_2_c_3"
+        android:fillColor="#00000000"
+        android:pathData="M326.8,859.5V908h35"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <!--C end -->
+    <!--D begin -->
+    <path
+        android:name="scene_2_d_1"
+        android:fillColor="#00000000"
+        android:pathData="M396.8,859.5H559"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <path
+        android:name="scene_2_d_2"
+        android:fillColor="#00000000"
+        android:pathData="M396.8,859.5V798h-35"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <path
+        android:name="scene_2_d_3"
+        android:fillColor="#00000000"
+        android:pathData="M396.8,859.5V908h-35"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+    <!--D end -->
+</vector>

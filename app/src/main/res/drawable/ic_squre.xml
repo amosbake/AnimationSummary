@@ -5,6 +5,7 @@
     android:viewportWidth="100.0">
     <path
         android:name="square"
-        android:fillColor="#272636"
+        android:strokeColor="#272636"
+        android:strokeWidth="5"
         android:pathData="M0,0 L100,0 L100,100 L0,100 z"/>
 </vector>

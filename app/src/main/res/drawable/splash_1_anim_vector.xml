@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_splash_1">
+    <!--scene_1 begin-->
+    <target
+        android:animation="@animator/anim_trim_1_0"
+        android:name="scene_1_building"/>
+    <target
+        android:animation="@animator/anim_trim_1_0"
+        android:name="scene_1_road"/>
+    <!--scene_1 end-->
+</animated-vector>

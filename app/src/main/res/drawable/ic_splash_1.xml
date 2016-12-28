@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="24dp"
+        android:height="24dp"
+        android:viewportHeight="1280.0"
+        android:viewportWidth="720.0">
+    <path
+        android:name="scene_1_building"
+        android:fillColor="#00000000"
+        android:pathData=" M0,929 L137.3,929 l-0.1,-202 h-31 L106,655 L612,655 V728 h-30.4 v204.1 L720,929"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+
+    <path
+        android:name="scene_1_road"
+        android:fillColor="#00000000"
+        android:pathData="M720,983L0,983"
+        android:strokeColor="#000"
+        android:strokeWidth="4"/>
+
+</vector>

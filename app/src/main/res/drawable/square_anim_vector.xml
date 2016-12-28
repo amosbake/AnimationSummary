@@ -2,7 +2,7 @@
 <animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:drawable="@drawable/ic_squre">
     <target
-        android:animation="@animator/anim_fill_color"
+        android:animation="@animator/anim_fade_in"
         android:name="square"/>
 
 </animated-vector>

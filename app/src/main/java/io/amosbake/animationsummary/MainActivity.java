@@ -23,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
     private ImageView ivAnimSearch;
     private ImageView ivAnimStar;
     private ImageView ivAnimFiveStar;
-
+    private ImageView ivAnimSplash;
+    private ImageView ivAnimSplash2;
+    private ImageView ivAnimSplash3;
+    private ImageView ivAnimSplash4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +38,65 @@ public class MainActivity extends AppCompatActivity {
         setupSearchAnim();
         setupPathTrimAnim();
         setupXmlMorphAnim();
+        setupCustomSplashAnim();
 
+    }
+    /**自定义路径动画**/
+    private void setupCustomSplashAnim() {
+        ivAnimSplash = (ImageView) findViewById(R.id.ivAnimSplash);
+        ivAnimSplash2 = (ImageView) findViewById(R.id.ivAnimSplash2);
+        ivAnimSplash3 = (ImageView) findViewById(R.id.ivAnimSplash3);
+        ivAnimSplash4 = (ImageView) findViewById(R.id.ivAnimSplash4);
+        findViewById(R.id.btnSplashAnim).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivAnimSplash.setVisibility(View.VISIBLE);
+                Drawable _drawable = ivAnimSplash.getDrawable();
+                if (_drawable instanceof Animatable){
+                    ((Animatable) _drawable).start();
+                }
+                ivAnimSplash2.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ivAnimSplash2.setVisibility(View.VISIBLE);
+                        Drawable _drawable2 = ivAnimSplash2.getDrawable();
+                        if (_drawable2 instanceof Animatable){
+                            ((Animatable) _drawable2).start();
+                        }
+                    }
+                },2000);
+                ivAnimSplash3.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ivAnimSplash3.setVisibility(View.VISIBLE);
+                        Drawable _drawable3 = ivAnimSplash3.getDrawable();
+                        if (_drawable3 instanceof Animatable){
+                            ((Animatable) _drawable3).start();
+                        }
+                    }
+                },4000);
+                ivAnimSplash4.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ivAnimSplash4.setVisibility(View.VISIBLE);
+                        Drawable _drawable4 = ivAnimSplash4.getDrawable();
+                        if (_drawable4 instanceof Animatable){
+                            ((Animatable) _drawable4).start();
+                        }
+                    }
+                },6000);
+                ivAnimSplash.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ivAnimSplash4.setVisibility(View.GONE);
+                        ivAnimSplash2.setVisibility(View.GONE);
+                        ivAnimSplash.setVisibility(View.GONE);
+                        ivAnimSplash3.setVisibility(View.GONE);
+
+                    }
+                },10000);
+            }
+        });
     }
 
     private void setupXmlMorphAnim() {
