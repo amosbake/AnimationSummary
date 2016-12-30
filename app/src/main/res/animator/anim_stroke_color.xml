@@ -5,6 +5,6 @@
                 android:propertyName="strokeColor"
                 android:valueFrom="@android:color/holo_blue_dark"
                 android:valueTo="@android:color/holo_green_light"
-                android:valueType="intType">
+                android:valueType="colorType">
 
 </objectAnimator>

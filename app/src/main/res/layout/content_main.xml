@@ -131,19 +131,19 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/btnFiveStarAnim"
-            style="@style/demo_style"
-            android:layout_height="200dp">
-            <ImageView
-                android:id="@+id/ivAnimFiveStar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:src="@drawable/fivestar_anim_vector"/>
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/btnFiveStarAnim"-->
+            <!--style="@style/demo_style"-->
+            <!--android:layout_height="200dp">-->
+            <!--<ImageView-->
+                <!--android:id="@+id/ivAnimFiveStar"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--app:srcCompat="@drawable/fivestar_anim_vector"/>-->
 
 
-        </RelativeLayout>
+        <!--</RelativeLayout>-->
 
         <RelativeLayout
             android:id="@+id/btnSplashAnim"
@@ -155,28 +155,28 @@
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 android:visibility="gone"
-                android:src="@drawable/splash_4_anim_vector"/>
+                app:srcCompat="@drawable/splash_4_anim_vector"/>
             <ImageView
                 android:id="@+id/ivAnimSplash3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 android:visibility="gone"
-                android:src="@drawable/splash_3_anim_vector"/>
+                app:srcCompat="@drawable/splash_3_anim_vector"/>
             <ImageView
                 android:id="@+id/ivAnimSplash2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 android:visibility="gone"
-                android:src="@drawable/splash_2_anim_vector"/>
+                app:srcCompat="@drawable/splash_2_anim_vector"/>
             <ImageView
                 android:id="@+id/ivAnimSplash"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 android:visibility="gone"
-                android:src="@drawable/splash_1_anim_vector"/>
+                app:srcCompat="@drawable/splash_1_anim_vector"/>
 
 
 

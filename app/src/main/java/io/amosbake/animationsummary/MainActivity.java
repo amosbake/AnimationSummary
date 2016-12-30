@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         setupColorAnim();
         setupSearchAnim();
         setupPathTrimAnim();
-        setupXmlMorphAnim();
+
+//        setupXmlMorphAnim();
         setupCustomSplashAnim();
 
     }
@@ -99,18 +100,18 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setupXmlMorphAnim() {
-        ivAnimFiveStar = (ImageView) findViewById(R.id.ivAnimFiveStar);
-        findViewById(R.id.btnFiveStarAnim).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Drawable _drawable = ivAnimFiveStar.getDrawable();
-                if (_drawable instanceof Animatable){
-                    ((Animatable) _drawable).start();
-                }
-            }
-        });
-    }
+//    private void setupXmlMorphAnim() {
+//        ivAnimFiveStar = (ImageView) findViewById(R.id.ivAnimFiveStar);
+//        findViewById(R.id.btnFiveStarAnim).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Drawable _drawable = ivAnimFiveStar.getDrawable();
+//                if (_drawable instanceof Animatable){
+//                    ((Animatable) _drawable).start();
+//                }
+//            }
+//        });
+//    }
 
     private void setupPathTrimAnim() {
         ivAnimStar = (ImageView) findViewById(R.id.ivAnimStar);
