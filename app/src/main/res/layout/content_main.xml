@@ -130,6 +130,18 @@
 
 
         </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/btnAnimDrawable"
+            style="@style/demo_style"
+            android:layout_height="200dp">
+            <ImageView
+                android:id="@+id/ivAnimDrawable"
+                android:layout_width="match_parent"
+                style="@style/demo_style"
+                android:layout_height="200dp"/>
+
+
+        </RelativeLayout>
 
         <!--<RelativeLayout-->
             <!--android:id="@+id/btnFiveStarAnim"-->

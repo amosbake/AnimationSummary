@@ -31,7 +31,7 @@ public class PathBezierView extends View implements View.OnClickListener {
     private int movePointY;
 
     private Path mPath;
-    private Paint mpathPaint;
+    private Paint mPathPaint;
     private Paint mPointPaint;
     public PathBezierView(Context context) {
         this(context,null);
@@ -44,10 +44,10 @@ public class PathBezierView extends View implements View.OnClickListener {
     public PathBezierView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mPath = new Path();
-        mpathPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mpathPaint.setColor(Color.BLUE);
-        mpathPaint.setStyle(Paint.Style.STROKE);
-        mpathPaint.setStrokeWidth(4);
+        mPathPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mPathPaint.setColor(Color.BLUE);
+        mPathPaint.setStyle(Paint.Style.STROKE);
+        mPathPaint.setStrokeWidth(4);
 
         mPointPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPointPaint.setColor(Color.RED);
@@ -78,7 +78,7 @@ public class PathBezierView extends View implements View.OnClickListener {
         mPath.reset();
         mPath.moveTo(startPointX,startPointY);
         mPath.quadTo(flagPointX,flagPointY,endPointX,endPointY);
-        canvas.drawPath(mPath, mpathPaint);
+        canvas.drawPath(mPath, mPathPaint);
         canvas.drawCircle(startPointX,startPointY,5,mPointPaint);
         canvas.drawCircle(endPointX,endPointY,5,mPointPaint);
         canvas.drawCircle(movePointX,movePointY,5,mPointPaint);

@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import io.amosbake.animationsummary.drawable.ExpandingCircleAnimationDrawable;
+
 public class MainActivity extends AppCompatActivity {
 
     static {
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView ivAnimSearch;
     private ImageView ivAnimStar;
     private ImageView ivAnimFiveStar;
+    private ImageView ivAnimDrawable;
     private ImageView ivAnimSplash;
     private ImageView ivAnimSplash2;
     private ImageView ivAnimSplash3;
@@ -40,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
 //        setupXmlMorphAnim();
         setupCustomSplashAnim();
+        ivAnimDrawable = (ImageView) findViewById(R.id.ivAnimDrawable);
+        final ExpandingCircleAnimationDrawable _animationDrawable = new ExpandingCircleAnimationDrawable(300f);
+        ivAnimDrawable.setImageDrawable(_animationDrawable);
+        findViewById(R.id.btnAnimDrawable).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _animationDrawable.start();
+            }
+        });
 
     }
     /**自定义路径动画**/

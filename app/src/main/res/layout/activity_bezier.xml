@@ -23,16 +23,24 @@
             android:id="@+id/thirdBezier"
             android:layout_width="300dp"
             android:layout_height="200dp"/>
-        <io.amosbake.animationsummary.wiget.DrawPadView
-            android:id="@+id/drawPad"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"/>
+        <!--<io.amosbake.animationsummary.wiget.DrawPadView-->
+            <!--android:id="@+id/drawPad"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="500dp"/>-->
         <io.amosbake.animationsummary.wiget.HeartRaiseView
             android:id="@+id/heart"
             android:layout_width="match_parent"
             android:layout_height="500dp"/>
         <io.amosbake.animationsummary.wiget.JumpPointView
             android:id="@+id/jump"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <io.amosbake.animationsummary.wiget.CrossBallView
+            android:id="@+id/jelly"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <io.amosbake.animationsummary.wiget.PointLoopView
+            android:id="@+id/loop"
             android:layout_width="match_parent"
             android:layout_height="200dp"/>
     </LinearLayout>
